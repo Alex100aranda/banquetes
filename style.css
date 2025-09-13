@@ -128,28 +128,64 @@ section {
   border-radius: 8px;
 }
 
-/* BENEFICIOS */
+.beneficios {
+  display: flex;
+  flex-direction: column; /* Por defecto, apilamos los elementos en pantallas pequeñas */
+  align-items: center; /* Centramos todo horizontalmente */
+  gap: 2rem; /* Espacio entre la imagen y el texto */
+  padding: 2rem;
+  background-color: #f8f9fa; /* Un color de fondo suave para que la sección destaque */
+}
+
+.imagen-beneficios {
+  width: 100%;
+  max-width: 500px; /* Limita el tamaño máximo de la imagen */
+  height: auto;
+  border-radius: 10px; /* Bordes redondeados para un toque moderno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+}
+
+.beneficios h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
 .beneficios ul {
-  list-style: none;
+  list-style: none; /* Quitamos los puntos de la lista por defecto */
   padding: 0;
+  margin: 0;
 }
 
 .beneficios li {
-  margin-bottom: 15px;
-  font-size: 1.1em;
-  position: relative;
-  padding-left: 30px;
-  text-align: left;
-  max-width: 600px;
-  margin: 0 auto 15px;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+  display: flex;
+  align-items: center;
 }
 
-.beneficios li i {
-  position: absolute;
-  left: 0;
-  color: #c62828;
+.beneficios .fas {
+  color: #28a745; /* Color verde para los iconos de check */
+  margin-right: 0.5rem;
 }
 
+/* Media query para pantallas más grandes (como tablets o desktops) */
+@media (min-width: 768px) {
+  .beneficios {
+    flex-direction: row; /* En pantallas grandes, colocamos los elementos en fila */
+    justify-content: center;
+    align-items: flex-start; /* Alineamos los elementos al inicio */
+  }
+
+  .beneficios img {
+    margin-right: 2rem; /* Espacio entre la imagen y el contenido */
+  }
+
+  .beneficios .contenido {
+    max-width: 500px;
+  }
+}
 /* TESTIMONIOS */
 .slider {
   display: flex;
