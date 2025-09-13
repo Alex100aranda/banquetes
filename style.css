@@ -141,7 +141,7 @@ nav a:hover {
 
 /* Sección "Quiénes Somos" */
 .about-us {
-    padding: 80px 20px;
+    padding: 0; /* Elimina el padding para pegarlo a otras secciones */
     background-color: #f7f7f7;
     text-align: center;
 }
@@ -149,6 +149,7 @@ nav a:hover {
 .about-us .container {
     max-width: 1000px;
     margin: 0 auto;
+    padding: 80px 20px; /* Mueve el padding al contenedor interno para controlar el espacio del contenido */
 }
 
 .section-title {
@@ -199,8 +200,8 @@ nav a:hover {
         text-align: center;
     }
 
-    .about-us {
-        padding: 50px 15px;
+    .about-us .container {
+        padding: 50px 15px; /* Ajusta el padding para móviles */
     }
 
     .section-title {
@@ -212,7 +213,6 @@ nav a:hover {
         margin-bottom: 20px;
     }
 }
-
 /* SECCIONES */
 section {
   padding: 60px 40px;
