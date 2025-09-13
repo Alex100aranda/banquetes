@@ -83,7 +83,6 @@ nav a:hover {
   font-weight: bold; /* Negritas */
 }
 
-
 /* CTA Button */
 .btn-cta {
   background-color: #c62828;
@@ -103,6 +102,43 @@ nav a:hover {
   background-color: #b71c1c;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* Responsivo para pantallas de celular */
+@media (max-width: 768px) {
+  .hero {
+    padding: 50px 10px; /* Menos padding en móviles */
+  }
+
+  .hero h1 {
+    font-size: 2.5em; /* Ajuste en el tamaño del título en pantallas pequeñas */
+  }
+
+  .hero-description {
+    font-size: 1.2em; /* Aumentamos un poco el tamaño de la descripción */
+    font-weight: bold; /* Mantener negritas */
+  }
+
+  .btn-cta {
+    font-size: 0.9em; /* Ajustar tamaño del botón */
+    padding: 12px 25px; /* Ajustar el padding del botón */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2em; /* Título más pequeño en pantallas muy pequeñas */
+  }
+
+  .hero-description {
+    font-size: 1em; /* Texto más pequeño en pantallas muy pequeñas */
+  }
+
+  .btn-cta {
+    font-size: 0.8em; /* Ajustar aún más el tamaño del botón en pantallas más pequeñas */
+    padding: 10px 20px; /* Ajustar el tamaño del botón */
+  }
+}
+
 
 /* SECCIONES */
 section {
