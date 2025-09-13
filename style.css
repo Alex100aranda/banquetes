@@ -1,23 +1,27 @@
-/* style.css */
-
-body {
+/* RESET BÁSICO */
+* {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: #333;
-  background-color: #fdfdfd;
-  scroll-behavior: smooth;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+/* HEADER */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
   padding: 20px 40px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 999;
 }
 
 .logo {
@@ -26,12 +30,11 @@ header {
   color: #c62828;
 }
 
+/* NAV */
 nav ul {
   display: flex;
   gap: 20px;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 nav a {
@@ -45,28 +48,29 @@ nav a:hover {
   color: #c62828;
 }
 
-/* Hero Banner */
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #c62828;
+  transition: all 0.3s ease;
+}
+
+/* HERO */
 .hero {
   text-align: center;
-  padding: 120px 20px;
-  background-image: url('img/banner.jpeg');
+  padding: 100px 20px;
+  background-image: url('img/banner.jpeg'); /* Asegúrate de tener esta imagen */
   background-size: cover;
   background-position: center;
   color: white;
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* overlay oscuro */
-  z-index: 0;
-}
-
-.hero > * {
-  position: relative;
-  z-index: 1;
 }
 
 .hero h1 {
@@ -77,9 +81,10 @@ nav a:hover {
 .hero p {
   font-size: 1.2em;
   max-width: 700px;
-  margin: 0 auto 20px;
+  margin: 0 auto;
 }
 
+/* CTA Button */
 .btn-cta {
   background-color: #c62828;
   color: white;
@@ -90,15 +95,16 @@ nav a:hover {
   margin-top: 20px;
   display: inline-block;
   border-radius: 5px;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-cta:hover {
+  transform: scale(1.05);
   background-color: #b71c1c;
-  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Secciones generales */
+/* SECCIONES */
 section {
   padding: 60px 40px;
   text-align: center;
@@ -113,33 +119,90 @@ section {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  transition: all 0.3s ease;
 }
 
+.servicio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* BENEFICIOS */
 .beneficios ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 600px;
-  text-align: left;
 }
 
 .beneficios li {
   margin-bottom: 15px;
   font-size: 1.1em;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  line-height: 1.5;
+  position: relative;
+  padding-left: 30px;
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto 15px;
 }
 
 .beneficios li i {
+  position: absolute;
+  left: 0;
   color: #c62828;
-  font-size: 1.2em;
-  min-width: 20px;
 }
 
+/* TESTIMONIOS */
+.slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
 
-/* Contacto */
+.slide {
+  max-width: 600px;
+  margin: 20px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.slide:hover {
+  transform: scale(1.02);
+  background-color: #fafafa;
+}
+
+.prev, .next {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #c62828;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* GALERÍA */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.galeria-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* CONTACTO */
 .contacto form {
   display: flex;
   flex-direction: column;
@@ -152,8 +215,6 @@ section {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-family: inherit;
-  font-size: 1em;
 }
 
 .contacto button {
@@ -163,14 +224,15 @@ section {
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .contacto button:hover {
   background-color: #b71c1c;
+  transform: scale(1.05);
 }
 
-/* Footer */
+/* FOOTER */
 footer {
   background-color: #222;
   color: white;
@@ -184,123 +246,18 @@ footer .redes {
 
 footer .redes a {
   color: #fff;
-  margin: 0 12px;
-  font-size: 1.4em;
-  display: inline-block;
-  transition: transform 0.3s ease, color 0.3s ease;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
 }
 
 footer .redes a:hover {
   color: #c62828;
-  transform: scale(1.2);
+  transform: scale(1.2) rotate(-5deg);
 }
 
-/* Testimonios slider */
-.slider {
-  position: relative;
-  max-width: 600px;
-  margin: 0 auto;
-  overflow: hidden;
-}
-
-.slide {
-  display: none;
-  transition: opacity 0.5s ease;
-}
-
-.slide.active {
-  display: block;
-}
-
-.slide p {
-  font-style: italic;
-  margin-bottom: 10px;
-}
-
-.slide strong {
-  color: #c62828;
-}
-
-.slider button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  font-size: 2em;
-  color: #c62828;
-  cursor: pointer;
-  padding: 10px;
-}
-
-.prev {
-  left: 0;
-}
-
-.next {
-  right: 0;
-}
-
-/* Galería */
-.galeria-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin-top: 30px;
-}
-
-.galeria-grid img {
-  width: 100%;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.galeria-grid img:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .galeria-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  header, .hero, .servicios, .contacto, .beneficios, .testimonios, .galeria {
-    padding: 20px;
-    text-align: center;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .galeria-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .btn-cta {
-    width: 80%;
-  }
-
-  .slider button {
-    font-size: 1.5em;
-  }
-}
-
-
-/* Botón flotante de WhatsApp */
+/* BOTÓN WHATSAPP */
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
@@ -308,77 +265,40 @@ footer .redes a:hover {
   background-color: #25d366;
   color: white;
   font-size: 28px;
-  padding: 16px;
+  padding: 15px;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  text-align: center;
   z-index: 1000;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.4);
 }
 
-/* Botón hamburguesa */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1001;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: #333;
-  border-radius: 2px;
-  transition: all 0.3s ease;
-}
-
-/* Menú mobile */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .hamburger {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+  }
+
+  nav ul.active {
     display: flex;
   }
 
-  nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background-color: #fff;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    transform: translateY(-150%);
-    transition: transform 0.3s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+  .hamburger {
+    display: flex;
   }
-
-  nav.active {
-    transform: translateY(0);
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px 0;
-  }
-}
-
-/* Hamburguesa animada al abrir */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(6px, -6px);
 }
 
 

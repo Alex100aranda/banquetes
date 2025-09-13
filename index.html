@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Banquetes Empresariales | Delicia Corporativa</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-  <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
 
+  <!-- AOS Animations -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
 </head>
+
 <body>
-    <header>
-        <div class="logo">Delicia Corporativa</div>
-      
-        <!-- Botón Hamburguesa -->
-        <div class="hamburger" id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      
-        <!-- Navegación con ID -->
-        <nav id="nav">
-          <ul>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#beneficios">Beneficios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
-      
+  <!-- Header -->
+  <header>
+    <div class="logo">Banquetes Caramelos y bolitas</div>
 
-  <section class="hero" data-aos="fade-up">
-    <h1>Banquetes y Catering para Empresas</h1>
-    <p>Servicio profesional para tus eventos corporativos. Desde coffee breaks hasta cenas ejecutivas.</p>
-    <a href="#contacto" class="btn-cta" data-aos="zoom-in" data-aos-delay="200">Cotiza tu evento</a>
-  </section>
-  
+    <!-- Botón Hamburguesa -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
+    <!-- Menú de navegación -->
+    <nav id="nav">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#beneficios">Beneficios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section class="hero">
+  <h1>Banquetes y Catering para Empresas</h1>
+  <p>
+    Servicio profesional para tus eventos corporativos. Desde coffee breaks hasta cenas ejecutivas.
+  </p>
+  <a href="#contacto" class="btn-cta">Cotiza tu evento</a>
+</section>
+
+  <!-- Servicios -->
   <section id="servicios" class="servicios" data-aos="fade-up">
     <h2>Servicios</h2>
+    <br>
     <div class="servicio-item" data-aos="fade-up" data-aos-delay="100">
-      <h3>Banquetes Corporativos</h3>
+      <h3>Banquetes Caramelos y bolitas</h3>
       <p>Eventos empresariales con menú personalizado y servicio completo.</p>
     </div>
     <div class="servicio-item" data-aos="fade-up" data-aos-delay="200">
@@ -60,19 +66,22 @@
       <p>Montaje profesional con todo lo necesario para tu evento.</p>
     </div>
   </section>
-  
-  <section id="beneficios" class="beneficios" data-aos="fade-up">
-    <h2>¿Por qué elegirnos?</h2>
-    <ul>
-      <li data-aos="fade-right" data-aos-delay="100"><i class="fas fa-check-circle"></i> Experiencia en eventos corporativos</li>
-      <li data-aos="fade-right" data-aos-delay="200"><i class="fas fa-check-circle"></i> Ingredientes frescos y de calidad</li>
-      <li data-aos="fade-right" data-aos-delay="300"><i class="fas fa-check-circle"></i> Presentación impecable</li>
-      <li data-aos="fade-right" data-aos-delay="400"><i class="fas fa-check-circle"></i> Planes a medida para PYMES</li>
-    </ul>
-  </section>
-  
-  
 
+<section id="beneficios" class="beneficios">
+    <img src="img/discapacidad2.jpg" alt="Descripción de la imagen" class="imagen-beneficios">
+    <h2>¿Por qué elegirnos?</h2>
+    <br>
+    <ul>
+      <li><i class="fas fa-check-circle"></i> Experiencia en eventos corporativos</li>
+      <li><i class="fas fa-check-circle"></i> Ingredientes frescos y de calidad</li>
+      <li><i class="fas fa-check-circle"></i> Presentación impecable</li>
+      <li><i class="fas fa-check-circle"></i> Planes a medida para PYMES</li>
+      <li><i class="fas fa-check-circle"></i> <strong><span style="text-decoration: underline;">Accesibilidad física:</span> contamos con entrada y salida accesible para personas con discapacidad</strong></li>
+      <li><i class="fas fa-check-circle"></i> <strong><span style="text-decoration: underline;">Personal capacitado en atención al cliente,</span> para ayudar a los clientes a tomar decisiones según sus preferencias</strong></li>
+    </ul>
+</section>
+
+  <!-- Testimonios -->
   <section class="testimonios" id="testimonios" data-aos="fade-up">
     <h2>Clientes felices</h2>
     <div class="slider">
@@ -88,33 +97,38 @@
         <p>"Todo llegó a tiempo, excelente atención al cliente. Recomendado."</p>
         <strong>— Mariana T., Directora en PymeConecta</strong>
       </div>
-      <button class="prev">‹</button>
-      <button class="next">›</button>
+    
     </div>
   </section>
-  
-  
-  <section class="galeria" id="galeria" data-aos="fade-up">
+
+ <!-- Galería -->
+<section class="galeria" id="galeria" data-aos="fade-up">
     <h2>Nuestro trabajo</h2>
+    <br>
     <div class="galeria-grid">
-      <img src="img/banquetes.jpeg" alt="Banquete 1" data-aos="zoom-in" data-aos-delay="100">
-      <img src="img/box.jpeg" alt="Box Lunch" data-aos="zoom-in" data-aos-delay="200">
-      <img src="img/coffe.jpeg" alt="Coffee break" data-aos="zoom-in" data-aos-delay="300">
-      <img src="img/empresarial.jpeg" alt="Evento empresarial" data-aos="zoom-in" data-aos-delay="400">
-    </div>
+        <img class="galeria-img" src="img/discapacidad.jpg" alt="Banquete 1" />
+        <img class="galeria-img" src="img/discapacidad1.jpg" alt="Box Lunch" />
+        <img class="galeria-img" src="img/banquetes.jpeg" alt="Banquete 1" />
+        <img class="galeria-img" src="img/box.jpeg" alt="Box Lunch" />
+        <img class="galeria-img" src="img/coffe.jpeg" alt="Coffee break" />
+        <img class="galeria-img" src="img/empresarial.jpeg" alt="Evento empresarial" />
+      </div>
   </section>
   
-  
+
+  <!-- Contacto -->
   <section id="contacto" class="contacto" data-aos="fade-up">
     <h2>Contáctanos</h2>
+    <br>
     <form>
-      <input type="text" placeholder="Nombre" required data-aos="fade-right" data-aos-delay="100">
-      <input type="email" placeholder="Correo electrónico" required data-aos="fade-right" data-aos-delay="200">
+      <input type="text" placeholder="Nombre" required data-aos="fade-right" data-aos-delay="100" />
+      <input type="email" placeholder="Correo electrónico" required data-aos="fade-right" data-aos-delay="200" />
       <textarea placeholder="Cuéntanos sobre tu evento..." data-aos="fade-right" data-aos-delay="300"></textarea>
       <button type="submit" data-aos="zoom-in" data-aos-delay="400">Enviar</button>
     </form>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 Delicia Corporativa. Todos los derechos reservados.</p>
     <div class="redes">
@@ -123,18 +137,20 @@
       <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
     </div>
   </footer>
-  
-  <!-- Botón flotante de WhatsApp -->
-<a href="https://wa.me/5215555555555" class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/5215555555555" class="whatsapp-float" target="_blank" aria-label="Chatea por WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
-  
 
+  <!-- AOS Script -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-  
+
+  <!-- Custom JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
